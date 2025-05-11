@@ -80,8 +80,8 @@ elif st.session_state.step == 'run':
     st.divider()
 
     if st.session_state.waiting_for_audio:
-        st.video("https://www.youtube.com/watch?v=pfUdcAvxh_Q")
-        time.sleep(6)  # 효과음 길이에 맞게 대기
+        st.audio("https://raw.githubusercontent.com/no5kio/lottery/main/asset/drum-roll-sound-effect_cut_2sec.mp3", format="audio/mp3")
+        time.sleep(2)  # 2초 대기
         gift_name, winners = st.session_state.active_draw
         st.session_state.waiting_for_audio = False
         st.session_state.active_draw = None
